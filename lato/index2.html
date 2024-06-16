@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<meta>
+<head>
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+
+<body>
+  <!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div>
+    <h2 class="">LATO WORKS</h2>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+        <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <i href="javascript:void(0)" class="w3-button w3-red w3-margin-right fas fa-bars" onclick="w3_open()"></i>
+    <span class="w3-xxlarge">LATO WORKS</span>
+  </header>   
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+ <!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px" id="home">
+  <!---Welcome Slider-->
+    <div  class="w3-display-container" style="max-width:100%; margin-top: 70px;">
+      <div class="mySlider w3-content w3-section w3-padding" style="max-width:800px">
+        <img class="w3-animate-top" src="images/s4.jpg" style="width:100%">
+        
+        <div class="w3-display-middle w3-large w3-container w3-padding-16">
+            <h1  class="w3-text-shadow w3-animate-opacity txt">Welcome To LATO WORKS</h1>
+              <hr>
+            <p class="w3-animate-opacity w3-card w3-pale-red w3-padding">Best quality in services </p>
+              
+        </div>
+    </div>
+      
+        
+      <div class="mySlider w3-content w3-section w3-padding" style="max-width:800px">
+              <img class="w3-animate-right" src="images/s2.jpg" style="width:100%">
+              
+          <div class="w3-display-middle w3-large w3-container w3-padding-16">
+                  <h1  class="w3-text-shadow w3-animate-opacity  txt ">Medical Room Furnishing</h1>
+                <hr>
+              <p class="w3-animate-opacity w3-card w3-pale-red w3-padding">Brillant finishing </p>
+                <a href="contform.html" class="w3-button w3-green w3-hover-yellow">Go Here</a>
+        </div>
+     </div>
+
+            <div class="mySlider w3-content w3-section w3-padding" style="max-width:800px">
+              <img class="w3-animate-left " src="images/s5.jpg" style="width:100%">
+              
+              <div class="w3-display-middle w3-large w3-container w3-padding-16">
+                  <h1  class="w3-text-shadow w3-animate-opacity txt ">Health Care Solar Powered</h1>
+                <hr>
+              <p class="w3-animate-opacity w3-card w3-pale-red w3-padding">Solar powered inverter solution</p>
+                <!--<a href="contform.html" class="w3-button w3-green w3-hover-yellow">Go Here</a>-->
+            </div>
+        </div>
+    </div>
+ 
+    <article class="w3-container" style="margin-top:80px" id="showcase" >
+      <h3  class="w3-jumbo">Medical Interior Furnishing </h3>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+    </article>
+   
+    <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <!--<img src="images/furni1.jpg" style="width:100%" onclick="onClick(this)" alt="Furnished walls">-->
+      <img src="images/furnishdoor.jpg" style="width:100%" onclick="onClick(this)" alt="Automated solid Sliding Lead door ">
+      <!--<img src="images/furnishwindow1.jpg" style="width:100%" onclick="onClick(this)" alt="Furnished Viewing Lead Glass Screen">-->
+      <img src="images/sh7.jpg" style="width:100%" onclick="onClick(this)" alt="Double Lead Door">
+    </div> 
+
+    <div class="w3-half">
+      
+      <img src="images/roomLead.jpg" style="width:100%" onclick="onClick(this)" alt="Lead Linng Room">
+      <img src="images/sh9.jpg" style="width:100%" onclick="onClick(this)" alt="Solar Powered Clinic">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright"><i class="fas fa-plus-circle"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+  <section>
+    <article class="w3-container" style="margin-top:80px" id="services" >
+      <h3  class="w3-jumbo">Medical Furnishing & Power solution </h3>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+    </article>
+
+    <div class="w3-row-padding w3-mobile">
+
+      <div class="w3-mobile w3-display-container" id="overlay" onclick="">
+            
+        <div id="" class=" w3-container w3-margin btnpos">
+          <button class="w3-button w3-circle w3-red w3-card" onclick="off()">&times;</button></div>
+          <div class="w3-card mySlidestxt"><h1>LATO Works </h1></div>
+
+               <div class="w3-content w3-section w3-mobile" style="width:800px">
+                
+                <img class="mySlides" src="images/sh9.jpg" style="width:100%" >
+                <img class="mySlides" src="images/door1.jpg" style="width:100%" >
+                <img class="mySlides" src="images/sh6.jpg" style="width:100%" >
+                <img class="mySlides" src="images/working.jpg" style="width:100%" >
+                <img class="mySlides" src="images/workdoor.jpg" style="width:100%" >
+                <img class="mySlides" src="images/lato worker on site.jpg" style="width:100%" >
+                <img class="mySlides" src="images/s4.jpg" style="width:100%" >
+                <img class="mySlides" src="images/furnis2.jpg" style="width:100%" >
+                
+                
+
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+              </div>
+    </div>
+          <div class="w3-col s4 w3-mobile w3-display-container w3-hover-opacity ">
+            <div class="w3-card"><img src="images/lato worker on site.jpg" class="" style="width:100%" >
+              <div class="w3-container w3-black">
+                <h3>Lead door Preparation</h3>
+              </div>
+            </div>
+            <div class="w3-display-middle w3-display-hover w3-xlarge w3-col s4">
+              <button onclick="on()" class="">Click ME </button>
+            </div> 
+          </div>
+      
+          <div class="w3-col s4 w3-mobile w3-display-container w3-hover-opacity">
+            <div class="w3-card"><img src="images/working.jpg" class="" style="width:100%" >
+              <div class="w3-container w3-black">
+                <h3>Installation of Lead door</h3>
+              </div>
+            </div>
+            <div class="w3-display-middle w3-display-hover w3-xlarge w3-col s4">
+              <button onclick="on()" class="">Click ME </button>
+            </div> 
+          </div>
+      
+            <div class="w3-col s4 w3-mobile w3-display-container w3-hover-opacity">
+              <div class="w3-card"><img src="images/workdoor.jpg" class="" style="width:100%" >
+                <div class="w3-container w3-black">
+                  <h3>Automated Lead doors</h3>
+                </div>
+              </div>
+            <div class="w3-display-middle w3-display-hover w3-xlarge w3-col s4 ">
+              <button onclick="on()" class="">Click ME </button>
+            </div> 
+            </div>
+
+    </div>
+  </section>
+
+  <section>
+    <article class="w3-container" style="margin-top:80px" id="packages" >
+      <h3  class="w3-jumbo">Specialization Services</h3>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+    </article>
+    <div class="w3-row-padding w3-mobile">
+      <div class="w3-col s4  w3-hover-opacity w3-mobile w3-display-container w3-margin-bottom" >
+        <div class="w3-card-4 w3-red w3-container" onclick="document.getElementById('id01').style.display='block'" >
+          <h2>Lead Lining Room Installtion</h2>
+        </div>
+      </div>
+      <div class="w3-col s4 w3-hover-opacity w3-mobile w3-display-container w3-margin-bottom" >
+        <div class="w3-card-4 w3-pale-red w3-container" onclick="document.getElementById('id02').style.display='block'">
+          <h2>Solar Power Solution</h2></div>
+      </div>
+      <div class="w3-col s4 w3-hover-opacity w3-mobile w3-display-container w3-margin-bottom" ;>
+        <div class="w3-card-4 w3-red w3-container" onclick="document.getElementById('id03').style.display='block'">
+          <h2>Automated Lead Lining Doors</h2></div>
+      </div>
+
+
+      <div class="w3-modal" id="id01">
+        <div class="w3-modal-content w3-mobile">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+          <div class="w3-padding-16"><img src="images/roomlead2.jpg" class="w3-image" style="width: 100%;">
+            <div class="w3-padding"><h2 class="w3-card-4">Lead Lining Room Installation</h2>
+              <p>We use <strong>high density and quality  lead sheet</strong> for lead lining installation to prevent radiaton in medical environment. 
+                the process is efficiently done to prevent any form of <strong>radiation leakage.</strong>
+              </p></div>
+            
+          </div>
+        </div>
+
+        </div>
+
+        <div class="w3-modal" id="id02">
+          <div class="w3-modal-content w3-mobile">
+            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+            <div class="w3-padding-16"><img src="images/sh9.jpg" class="w3-image" style="width: 100%;">
+              <div class="w3-padding"><h2 class="w3-card-4">Solar Power Solution</h2>
+                <p> In anticipation to move <strong>medical service</strong> to the people, one of hurdles to come across is the issue of 
+                   electrical power shortages to <strong>power medical equipment</strong>, in other to address this situation <strong>LATO Work's</strong> deliver 
+                   <strong>efficient Solar Power Solution</strong> for medical facilities that keeps the facility run 24 hours services.  
+                </p></div>
+            </div>
+          </div>
+  
+          </div>
+
+
+          <div class="w3-modal" id="id03">
+          <div class="w3-modal-content w3-mobile">
+            <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+            <div class="w3-padding-16"><img src="images/furnishdoor.jpg" class="w3-image" style="width: 100%;">
+              <div class="w3-padding"><h2 class="w3-card-4">Automated Lead Lining Doors</h2>
+                <p>  Our experience over the years has increase our capacity in the area of furnished <strong>Lead doors</strong>  both <strong>manual</strong> opening
+                    and <strong>automated</strong> opening. We have been engaged by the goverment and private medical center across Nigeria. 
+                </p></div>
+            </div>
+          </div>
+  
+          </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+    <footer class="w3-container" style="" id="contact">
+      <h2 class="w3-panel w3-red w3-round-xlarge" style="margin-bottom: 0;">Contact Us:</h2>
+      <address class="w3-center w3-panel w3-pale-red " style="margin-top:0;" >
+              <p><i class="fa fa-home"></i>21 Idera Street Oworonshoki Lagos, Nigeria</p>
+        <strong><u>Hotline:</u> 07033839573, 08033069708</strong>
+        <p><strong><u>Email:</u></strong> lato4top@gmail.com</p>
+      </address>
+    </footer>
+  </div>
+</body>
+
+
+
+
+<script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  </script>
+
+
+<script>
+  //Image slider
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlider");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+  }
+
+</script>
+
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex +=n);
+  }
+
+  function showDivs(n){
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display="block";
+  }
+
+</script>
+
+
+<script>
+  function on(){
+    document.getElementById("overlay").style.display ="block";
+  }
+  function off(){
+    document.getElementById("overlay").style.display ="none";
+  }
+</script>
+
+
+
+</html>

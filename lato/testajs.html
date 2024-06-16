@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="myCalc" ng-controller="calcCtrl">
+  
+  <!--<div ng-app="" >
+    <p>Name: <input type="text" ng-model="name"></p>
+    <h1>Hello: {{name}}</h1>
+  </div>-->
+
+  <div >
+    <p>Enter Value1:  <input type="input" ng-model="first" ng-init="first='500'"/></p>
+    <p>Enter Value2:  <input type="input" ng-model="second" ng-init="second='100'"/></p>
+  </div>
+
+  <div>
+    <input type="button" name="plus" value="+" style="width: 5%;" ng-click="add_func()" />
+    <input type="button" name="Minus" value="_" style="width: 5%;" ng-click="subt_func()" />
+  </div>
+
+  <div style="margin-top: 10px;">
+    <input type="button" name="cal" value="Calculate" style="width: 10%; color: #000;"/>
+    <hr>
+    <input type="input" ng-model="result"/>
+    
+  </div>
+
+</body>
+
+<script>
+
+var app = angular.module("myCalc", []);
+
+app.controller("calcCtrl", function ($scope) {
+
+    $scope.add_func = function add_func() {
+        var a = Number($scope.first || 0);
+        var b = Number($scope.second || 0);
+        $scope.result = a+b;
+    }
+
+    $scope.subt_func = function () {
+        var a = Number($scope.first || 0);
+        var b = Number($scope.second || 0);
+        $scope.result = a-b;
+    }
+
+    $scope.multi_func = function () {
+        var a = Number($scope.first || 0);
+        var b = Number($scope.second || 0);
+        $scope.result = a*b;
+    }
+
+    $scope.div_func = function () {
+        var a = Number($scope.first || 0);
+        var b = Number($scope.second || 0);
+        $scope.result = a/b;
+    }
+
+    });
+</script>
+  
+</html>
+
